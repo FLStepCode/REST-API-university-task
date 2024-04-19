@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Student info</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <p>{{time}}</p>
+        <h1>Steam profile</h1>
+        <img src={{steam_avatar}} id="profileStyle">
+        <h4>Summary:</h4>
+        <ul>
+            <li>Nickname: {{steam_name}}</li>
+            <li>Status: {{steam_status}}</li>
+            <li>Profile visibility: {{steam_profile_status}}</li>
+        </ul>
+        <h4>Owned games:</h4>
+        <ul>
+            {% for games in steam_games %}
+                <li>
+                    {{games[0]}}
+                    <img src={{games[1]}}>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>&nbsp;</p>
+        <h1>Zulip profile</h1>
+        <img src={{zul_avatar}} id="zulipProfileStyle">
+        <ul>
+            <li>ID: {{zul_id}}</li>
+            <li>Name: {{zul_name}}</li>
+            <li>Email: {{zul_email}}</li>
+            <li>Role: {{zul_role}}</li>
+            <li>Status:
+                <ul>
+                {% for state in zul_status %}
+                    <li>{{state}}</li>
+                {% endfor %}
+                </ul>
+            </li>
+            <li>Profile info:
+                <ul>
+                {% for info in zul_info %}
+                    <li>{{info}}</li>
+                {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </body>
+
+</html>

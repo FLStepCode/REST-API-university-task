@@ -1,0 +1,19 @@
+li {
+    margin: 5px;
+}
+
+img#profileStyle {
+    margin: 0px 10px 0px 10px;
+    border-radius: 10%;
+}
+
+img#zulipProfileStyle {
+    margin: 0px 10px 0px 10px;
+    border-radius: 10%;
+}
+
+li img {
+    vertical-align: middle;
+    margin-left: 5px;
+    border-radius: 10%;
+}
